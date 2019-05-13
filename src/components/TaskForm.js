@@ -5,7 +5,7 @@ class TaskForm extends Component {
 
     constructor(props){
         super(props);
-        this.state = {}
+        this.state = {};
     }
 
     componentWillMount(){
@@ -21,14 +21,13 @@ class TaskForm extends Component {
     }
 
     componentWillReceiveProps(nextProps){
-        //console.log(nextProps);
         if(nextProps && nextProps.itemEditing){
             this.setState({
                id: nextProps.itemEditing.id, 
                name: nextProps.itemEditing.name,
                status: nextProps.itemEditing.status
             });
-        }else if(nextProps && nextProps.itemEditing === null){
+        }else {
             this.onClear();
         }
     }
@@ -51,7 +50,6 @@ class TaskForm extends Component {
 
     onSubmit = (event) =>{
         event.preventDefault();
-        
         this.props.onSaveTask(this.state);
         // close form & cancle
         this.onClear();
@@ -125,7 +123,7 @@ const mapStateToProps = state => {
     }
 };
 
-const mapDispatchToProps = (dispatch,props) => {
+const mapDispatchToProps = (dispatch, props) => {
     return {
         onSaveTask : (task) => {
             dispatch(actions.saveTask(task));
