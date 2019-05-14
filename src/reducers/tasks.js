@@ -25,7 +25,6 @@ var myReducer = (state = initialState, action) =>{
         case types.LIST_ALL:
             return state;
         case types.SAVE_TASK:
-            console.log(action.task.status);
             var temp = {
                 id : action.task.id,
                 name: action.task.name,
@@ -36,7 +35,6 @@ var myReducer = (state = initialState, action) =>{
                 state.push(temp);
             }else{
                 index = findIndex(state, temp.id);
-                console.log(temp);
                 state[index] = temp;
             }
             localStorage.setItem('tasks', JSON.stringify(state));

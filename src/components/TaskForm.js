@@ -5,7 +5,11 @@ class TaskForm extends Component {
 
     constructor(props){
         super(props);
-        this.state = {};
+        this.state = {
+            id: '',
+            name: '',
+            status: false
+        };
     }
 
     componentWillMount(){
@@ -58,7 +62,6 @@ class TaskForm extends Component {
 
     onClear = () =>{
         this.setState({
-            id: '',
             name: '',
             status: false
         });

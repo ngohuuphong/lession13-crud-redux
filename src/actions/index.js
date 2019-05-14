@@ -43,3 +43,15 @@ export const editTask = (task) => {
         task // id : id
     }
 };
+export const filterTask = (filter) => {
+    return {
+        type : types.FILTER_TABLE,
+        filter // filter : filterName, filterStatus
+    }
+};
+export const searchTask = (keyword) => {
+    return {
+        type : types.SEARCH,
+        keyword // keyword : keyword
+    }
+};
