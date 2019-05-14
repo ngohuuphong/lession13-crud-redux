@@ -2,7 +2,7 @@
   "name": "lession10-crud",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://quanlycongviec_ngohuuphong.github.io/deploy-github",
+  "homepage": "https://ngohuuphong.github.io/lession13-crud-redux",
   "dependencies": {
     "lodash": "^4.17.11",
     "react": "^16.8.6",
