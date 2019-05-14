@@ -1,13 +1,13 @@
 {
-  "main.css": "/deploy-github/static/css/main.62f0ddc4.chunk.css",
-  "main.js": "/deploy-github/static/js/main.156ae6d5.chunk.js",
-  "main.js.map": "/deploy-github/static/js/main.156ae6d5.chunk.js.map",
-  "runtime~main.js": "/deploy-github/static/js/runtime~main.94aeffc2.js",
-  "runtime~main.js.map": "/deploy-github/static/js/runtime~main.94aeffc2.js.map",
-  "static/js/2.04213196.chunk.js": "/deploy-github/static/js/2.04213196.chunk.js",
-  "static/js/2.04213196.chunk.js.map": "/deploy-github/static/js/2.04213196.chunk.js.map",
-  "index.html": "/deploy-github/index.html",
-  "precache-manifest.46398ad74e49c9ad5e2e97d673c09271.js": "/deploy-github/precache-manifest.46398ad74e49c9ad5e2e97d673c09271.js",
-  "service-worker.js": "/deploy-github/service-worker.js",
-  "static/css/main.62f0ddc4.chunk.css.map": "/deploy-github/static/css/main.62f0ddc4.chunk.css.map"
+  "main.css": "/lession13-crud-redux/static/css/main.62f0ddc4.chunk.css",
+  "main.js": "/lession13-crud-redux/static/js/main.a8c7b0c5.chunk.js",
+  "main.js.map": "/lession13-crud-redux/static/js/main.a8c7b0c5.chunk.js.map",
+  "runtime~main.js": "/lession13-crud-redux/static/js/runtime~main.c12d0c25.js",
+  "runtime~main.js.map": "/lession13-crud-redux/static/js/runtime~main.c12d0c25.js.map",
+  "static/js/2.04213196.chunk.js": "/lession13-crud-redux/static/js/2.04213196.chunk.js",
+  "static/js/2.04213196.chunk.js.map": "/lession13-crud-redux/static/js/2.04213196.chunk.js.map",
+  "index.html": "/lession13-crud-redux/index.html",
+  "precache-manifest.168d5e59562c9e469223a109efd38eae.js": "/lession13-crud-redux/precache-manifest.168d5e59562c9e469223a109efd38eae.js",
+  "service-worker.js": "/lession13-crud-redux/service-worker.js",
+  "static/css/main.62f0ddc4.chunk.css.map": "/lession13-crud-redux/static/css/main.62f0ddc4.chunk.css.map"
 }
