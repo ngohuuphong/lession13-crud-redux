@@ -3,44 +3,10 @@ import './App.css';
 import TaskForm from './components/TaskForm';
 import Control from './components/Control';
 import TaskList from './components/TaskList';
-
 import {connect} from 'react-redux';
 import * as actions from './actions/index';
 class App extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            taskEditing: null,
-            keyword: '',
-            sortBy: '',
-            sortValue: 1
-        }
-    }
- 
-    onGenerateData = () => {
-        var tasks = [
-            {
-                id: this.gererateID(),
-                name: 'Học lập trình',
-                status: true
-            },
-            {
-                id: this.gererateID(),
-                name: 'Đi bơi',
-                status: false
-            },
-            {
-                id: this.gererateID(),
-                name: 'Ngủ',
-                status: true
-            }
-        ];
-        this.setState({
-            tasks : tasks
-        });
-        localStorage.setItem('tasks',JSON.stringify(tasks));
-    }
-    
+
     onToggleForm = () =>{
         var { itemEditing } = this.props;
         if(itemEditing && itemEditing.id !== ''){
@@ -54,69 +20,9 @@ class App extends Component {
             status: false
         });
     }
-    
-    onShowForm = () =>{
-        this.setState({
-            isDisplayForm : true
-        });
-    }
 
-    findIndex = (id) =>{
-        var {tasks} = this.state;
-        var result = -1;
-        tasks.forEach((task,index) =>{
-            if(task.id===id){
-                result =  index;
-            }
-        });
-        return result;
-    }
-
-    onUpdate = (id) =>{
-        var {tasks} = this.state;
-        var index = this.findIndex(id);
-        var taskEditing= tasks[index];
-        this.onCloseForm();
-        this.setState({
-            taskEditing: taskEditing
-        });
-        this.onShowForm();
-    }
-
-    onSearch = (keyword) =>{
-        this.setState({
-            keyword: keyword
-        });
-    }
-    onSort = (sortBy,sortValue) =>{
-        this.setState({
-           sortBy: sortBy,
-           sortValue: sortValue
-        });
-    }
     render() {
-        var {
-            // keyword,
-            sortBy,
-            sortValue
-        } = this.state; // var tasks = this.state.tasks
-
         var { isDisplayForm } = this.props;
-
-        // if(sortBy === 'name'){
-        //     tasks.sort( (a, b) =>{
-        //         if(a.name > b.name) return sortValue;
-        //         else if(a.name < b.name) return -sortValue;
-        //         else return 0;
-        //     });
-        // }else{
-        //     tasks.sort( (a, b) =>{
-        //         if(a.status > b.status) return sortValue;
-        //         else if(a.status < b.status) return -sortValue;
-        //         else return 0;
-        //     });
-        // }
-        
         return (
              <div className="container">
                 <div className="text-center">
@@ -135,14 +41,7 @@ class App extends Component {
                         >
                             <span className="fa fa-plus mr-5"></span>Thêm Công Việc
                         </button>
-
-                        <Control 
-                            onSearch={this.onSearch} 
-                            onSort={this.onSort}
-                            sortBy={sortBy}
-                            sortValue={sortValue}
-                        />
-
+                        <Control/>
                         <div className="row mt-15">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <TaskList />
